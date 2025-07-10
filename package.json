@@ -11,6 +11,9 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "serverless-mysql": "^1.5.5",
+    "swr": "^2.2.2",
     "next": "15.3.5"
   },
   "devDependencies": {

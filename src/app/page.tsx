@@ -1,6 +1,20 @@
+"use client";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    async function fetchPosts() {
+      const res = await fetch('/api/get-categorias')
+      const data = await res.json()
+      setPosts(data.reverse())
+    }
+    fetchPosts()
+  }, []);
+
+  console.log(posts);
+
   return (
     <div className="grid grid-rows-[1fr] items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
       <main className="grid grid-cols-[1fr] sm:grid-cols-[3fr_1fr] gap-[0px] h-full items-center sm:items-start">
