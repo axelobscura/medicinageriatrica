@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useCategorias } from '../../lib/swr-hooks'
 
 export default function Home() {
-  const {categorias, isLoadingCategorias, isError} = useCategorias();
+  const {categorias, isLoadingCategorias} = useCategorias();
 
   if(isLoadingCategorias){
     return(
@@ -12,7 +12,6 @@ export default function Home() {
   }
 
   console.log(categorias);
-  console.log("Error: ", isError);
 
   return (
     <div className="grid grid-rows-[1fr] items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
