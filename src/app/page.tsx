@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="grid grid-rows-[1fr] items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <main className="grid grid-cols-[3fr_1fr] gap-[0px] h-full items-center sm:items-start">
-        <div className="bg-gray-950 h-full flex flex-col items-center justify-center text-white p-8">
-          <h1 className="text-8xl font-extralight text-left w-full">CURSO DE ACTUALIZACIÓN EN MEDICINA GERIÁTRICA</h1>
-          <h2 className="text-4xl font-extralight text-gray-300 text-left w-full pl-2">23 de julio 2025 | ON DEMAND</h2>
+      <main className="grid grid-cols-[1fr] sm:grid-cols-[3fr_1fr] gap-[0px] h-full items-center sm:items-start">
+        <div className="bg-gray-950 h-full flex flex-col items-center justify-center text-white p-2 sm:p-8">
+          <h1 className="text-4xl sm:text-8xl font-extralight text-left w-full">CURSO DE ACTUALIZACIÓN EN MEDICINA GERIÁTRICA</h1>
+          <h2 className="text-1xl sm:text-4xl font-extralight text-gray-300 text-left w-full pl-1">23 de julio 2025 | ON DEMAND</h2>
         </div>
-        <div className="bg-white h-full flex flex-col justify-center p-8">
+        <div className="bg-white h-full flex flex-col justify-center p-1 sm:p-8 w-full">
           <Image
             src="/AMGG-WP.png"
             alt="Logo AMGG"
@@ -19,7 +19,7 @@ export default function Home() {
 
           <h2 className="text-3xl font-extralight text-gray-900 mb-6">REGISTRO</h2>
           
-          <form className="space-y-4">
+          <form className="space-y-0 sm:space-y-4 w-full">
             <div>
               <label htmlFor="name" className="block text-sm text-gray-700 mb-1 font-extralight">
                 Nombre completo
