@@ -14,8 +14,8 @@ export default function Home() {
   console.log(categorias);
 
   return (
-    <div className="grid grid-rows-[1fr] items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <main className="grid grid-cols-[1fr] sm:grid-cols-[3fr_1fr] gap-[0px] h-full items-center sm:items-start">
+    <div>
+      <main className="grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-[0px] h-full items-center sm:items-start">
         <div className="bg-gray-950 h-full flex flex-col items-center justify-center text-white p-2 sm:p-8">
           <h1 className="text-4xl sm:text-8xl font-extralight text-left w-full">CURSO DE ACTUALIZACIÓN EN MEDICINA GERIÁTRICA</h1>
           <h2 className="text-1xl sm:text-4xl font-extralight text-gray-300 text-left w-full pl-1">23 de julio 2025 | ON DEMAND</h2>
@@ -25,12 +25,10 @@ export default function Home() {
             src="/AMGG-WP.png"
             alt="Logo AMGG"
             width={200}
-            height={100}
+            height={50}
             className="mb-6 mx-auto"
           />
-
           <h2 className="text-3xl font-extralight text-gray-900 mb-6">REGISTRO</h2>
-          
           <form className="space-y-0 sm:space-y-4 w-full">
             <div>
               <label htmlFor="name" className="block text-sm text-gray-700 mb-1 font-extralight">
@@ -45,7 +43,6 @@ export default function Home() {
                 placeholder="Ingrese su nombre completo"
               />
             </div>
-
             <div>
               <label htmlFor="email" className="block text-sm text-gray-700 mb-1 font-extralight">
                 Correo electrónico
@@ -59,7 +56,6 @@ export default function Home() {
                 placeholder="ejemplo@correo.com"
               />
             </div>
-
             <div>
               <label htmlFor="phone" className="block text-sm text-gray-700 mb-1 font-extralight">
                 Teléfono
@@ -73,7 +69,6 @@ export default function Home() {
                 placeholder="+52 55 1234 5678"
               />
             </div>
-
             <div>
               <label htmlFor="profession" className="block text-sm text-gray-700 mb-1 font-extralight">
                 Profesión
@@ -87,7 +82,6 @@ export default function Home() {
                 placeholder="Ej. Médico, Enfermero, Estudiante..."
               />
             </div>
-
             <div>
               <label htmlFor="specialty" className="block text-sm font-medium text-gray-700 mb-1 font-extralight">
                 Especialidad / Área de interés
@@ -114,7 +108,6 @@ export default function Home() {
                 <option value="otro">Otro</option>
               </select>
             </div>
-
             <button
               type="submit"
               className="w-full bg-gray-700 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 font-medium mt-6 uppercase cursor-pointer"
