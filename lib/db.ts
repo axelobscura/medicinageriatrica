@@ -20,7 +20,8 @@ export async function query(
   } catch (e: unknown) {
     if (e instanceof Error) {
       throw Error(e.message)
+    } else {
+      throw Error('An unknown error occurred')
     }
-    throw e
   }
 }
