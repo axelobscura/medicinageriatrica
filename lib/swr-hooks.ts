@@ -13,22 +13,3 @@ export function useCategorias() {
     isError: error,
   }
 }
-
-export function useComites() {
-  const { data, error } = useSWR(`/api/get-comites`, fetcher)
-
-  return {
-    comites: data,
-    isLoadingComites: !error && !data,
-    isError: error,
-  }
-}
-
-export function useCapitulos(id: string) {
-  const { data, error } = useSWR([`/api/get-capitulos?id=`+id], fetcher)
-  return {
-    capitulos: data,
-    isLoading: !error && !data,
-    isError: error,
-  }
-}
