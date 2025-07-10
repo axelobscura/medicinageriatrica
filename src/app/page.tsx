@@ -1,19 +1,18 @@
 "use client";
 import React, {useState, useEffect} from "react";
 import Image from "next/image";
+import { useCategorias } from '../../lib/swr-hooks'
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    async function fetchPosts() {
-      const res = await fetch('/api/get-categorias')
-      const data = await res.json()
-      setPosts(data)
-    }
-    fetchPosts()
-  }, []);
+  const {categorias, isLoadingCategorias} = useCategorias();
 
-  console.log(posts);
+  if(isLoadingCategorias){
+    return(
+      <p>Loading</p>
+    )
+  }
+
+  console.log(categorias);
 
   return (
     <div className="grid grid-rows-[1fr] items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
