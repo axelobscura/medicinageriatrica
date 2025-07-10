@@ -7,7 +7,7 @@ export async function GET() {
       SELECT * FROM medicinageriatrica ORDER BY id ASC
     `)
     return NextResponse.json(results);
-  } catch (error) {
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
+  } catch (e: unknown) {
+    return NextResponse.json({ error: e }, { status: 500 })
   }
 }
