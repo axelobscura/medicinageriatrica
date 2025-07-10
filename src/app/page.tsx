@@ -8,7 +8,7 @@ export default function Home() {
     async function fetchPosts() {
       const res = await fetch('/api/get-categorias')
       const data = await res.json()
-      setPosts(data.reverse())
+      setPosts(data)
     }
     fetchPosts()
   }, []);
