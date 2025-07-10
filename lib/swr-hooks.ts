@@ -24,7 +24,7 @@ export function useComites() {
   }
 }
 
-export function useCapitulos(id: any) {
+export function useCapitulos(id: string) {
   const { data, error } = useSWR([`/api/get-capitulos?id=`+id], fetcher)
   return {
     capitulos: data,
